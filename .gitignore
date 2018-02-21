@@ -1,1 +1,11 @@
-vendor/
+/vendor
+/.idea
+/.vscode
+/.vagrant
+/docs/api/build
+/docs/api/_cache
+npm-debug.log
+yarn-error.log
+.env
+*~
+.php_cs.cache
