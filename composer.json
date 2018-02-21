@@ -1,0 +1,25 @@
+{
+  "name": "elnooronline/laravel-adminlte",
+  "description": "A short description of what your package does",
+  "keywords": ["laravel", "adminlte", "dashboard", "admin", "administrator"],
+  "require": {
+    "php": "^7.0",
+    "illuminate/support": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Elnooronline\\LaravelAdminLte\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Elnooronline\\LaravelAdminLte\\Providers\\LaravelAdminLteServiceProvider"
+      ],
+      "aliases": {
+        "AdminLte": "Elnooronline\\LaravelAdminLte\\Facades\\AdminLte"
+      }
+    }
+  }
+}
