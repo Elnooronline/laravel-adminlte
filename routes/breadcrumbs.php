@@ -2,10 +2,10 @@
 
 
 Breadcrumbs::register('home', function ($breadcrumbs) {
-    $breadcrumbs->push('Home', route('home'));
+    $breadcrumbs->push('Home', url('home'));
 });
 
 Breadcrumbs::register('tasks', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Tasks', route('tasks'));
+    $breadcrumbs->push('Tasks', url('tasks'));
 });
