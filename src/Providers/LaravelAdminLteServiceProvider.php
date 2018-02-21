@@ -65,7 +65,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
 
         $this->publishes([
             $this->packagePath('resources/stubs/auth') => base_path('resources/views/auth'),
-            $this->packagePath('resources/stubs/home.blade.php') => base_path('resources/views'),
+            $this->packagePath('resources/stubs/home.blade.php') => base_path('resources/views/home.blade.php'),
         ], 'adminlte.auth');
     }
 
