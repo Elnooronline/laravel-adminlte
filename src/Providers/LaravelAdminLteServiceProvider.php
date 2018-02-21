@@ -42,7 +42,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
         $this->publishes([
             $adminltePath => config_path('adminlte.php'),
             $breadcrumbsPath => config_path('breadcrumbs.php'),
-        ], 'config');
+        ], 'adminlte.config');
 
         $this->mergeConfigFrom($adminltePath, 'adminlte');
         $this->mergeConfigFrom($breadcrumbsPath, 'breadcrumbs');
@@ -51,8 +51,8 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
     private function publishBreadcrumbs()
     {
         $this->publishes([
-            $this->packagePath('config/breadcrumbs.php') => base_path('routes/breadcrumbs.php'),
-        ], 'breadcrumbs');
+            $this->packagePath('routes/breadcrumbs.php') => base_path('routes/breadcrumbs.php'),
+        ], 'adminlte.breadcrumbs');
     }
 
     private function loadViews()
@@ -61,11 +61,12 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
 
         $this->publishes([
             $path => base_path('resources/views/vendor/adminlte'),
-        ], 'views');
+        ], 'adminlte.views');
 
         $this->publishes([
             $this->packagePath('resources/stubs/auth') => base_path('resources/views/auth'),
-        ], 'auth');
+            $this->packagePath('resources/stubs/home.blade.php') => base_path('resources/views'),
+        ], 'adminlte.auth');
     }
 
     private function loadTranslations()
@@ -73,7 +74,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom($path = $this->packagePath('resources/lang'), 'adminlte');
         $this->publishes([
             $path => base_path('resources/lang/vendor/adminlte'),
-        ], 'translations');
+        ], 'adminlte.translations');
     }
 
 
@@ -81,7 +82,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
     {
         $this->publishes([
             $this->packagePath('resources/assets') => public_path('vendor/adminlte'),
-        ], 'assets');
+        ], 'adminlte.assets');
     }
 
     private function packagePath($path)
