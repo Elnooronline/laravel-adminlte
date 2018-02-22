@@ -32,6 +32,16 @@ return [
         'dir' => 'ltr',
     ],
 
+    'header' => [
+        'items' => [
+            'adminlte::layout.header.items.messages',
+            'adminlte::layout.header.items.notifications',
+            'adminlte::layout.header.items.tasks',
+            'adminlte::layout.header.items.user',
+            'adminlte::layout.header.items.logout',
+        ],
+    ],
+
     'urls' => [
         /*
         |--------------------------------------------------------------------------

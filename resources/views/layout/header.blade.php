@@ -18,10 +18,9 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                @include('adminlte::layout.header.dropdowns.messages')
-                @include('adminlte::layout.header.dropdowns.notifications')
-                @include('adminlte::layout.header.dropdowns.tasks')
-                @include('adminlte::layout.header.dropdowns.user')
+                @foreach (config('adminlte.header.items') as $headerItem)
+                    @include($headerItem)
+                @endforeach
             </ul>
         </div>
     </nav>
