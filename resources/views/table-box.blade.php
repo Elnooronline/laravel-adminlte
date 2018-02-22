@@ -16,17 +16,17 @@
 
     <table class="table">
         {{ $slot }}
-        @unless ($collection->count())
+        @if (isset($collection) && $collection->isEmpty())
             <tr>
                 <td colspan="100%" style="text-align: center;">
                     No data available.
                 </td>
             </tr>
-        @endunless
+        @endif
     </table>
 
     <!-- /.box-body -->
-    @if (isset($footer) || (method_exists($collection, 'links') && ! empty($collection->links()->toHtml())))
+    @if (isset($footer) || (isset($collection) && method_exists($collection, 'links') && ! empty($collection->links()->toHtml())))
         <div class="box-footer">
             <div class="pull-right">
                 {{ $collection->links() }}
