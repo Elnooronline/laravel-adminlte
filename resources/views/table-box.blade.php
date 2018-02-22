@@ -16,7 +16,7 @@
 
     <table class="table">
         {{ $slot }}
-        @unless ($model->count())
+        @unless ($collection->count())
             <tr>
                 <td colspan="100%" style="text-align: center;">
                     No data available.
