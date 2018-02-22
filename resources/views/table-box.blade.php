@@ -23,7 +23,6 @@
                 </td>
             </tr>
         @endunless
-        @endif
     </table>
 
     <!-- /.box-body -->
