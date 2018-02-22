@@ -30,15 +30,23 @@ return [
          * The direction of the dashboard.
          */
         'dir' => 'ltr',
-    ],
 
-    'header' => [
-        'items' => [
-            'adminlte::layout.header.items.messages',
-            'adminlte::layout.header.items.notifications',
-            'adminlte::layout.header.items.tasks',
-            'adminlte::layout.header.items.user',
-            'adminlte::layout.header.items.logout',
+        'header' => [
+            'items' => [
+                'adminlte::layout.header.messages',
+                'adminlte::layout.header.notifications',
+                'adminlte::layout.header.tasks',
+                'adminlte::layout.header.user',
+                'adminlte::layout.header.logout',
+            ],
+        ],
+
+        'sidebar' => [
+            'items' => [
+                'adminlte::layout.sidebar.user-panel',
+                'adminlte::layout.sidebar.items',
+                'adminlte::layout.sidebar.search-form',
+            ],
         ],
     ],
 

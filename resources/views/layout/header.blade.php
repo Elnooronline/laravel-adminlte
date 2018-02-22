@@ -18,8 +18,8 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                @foreach (config('adminlte.header.items') as $headerItem)
-                    @include($headerItem)
+                @foreach (config('adminlte.appearence.header.items') as $item)
+                    @include($item)
                 @endforeach
             </ul>
         </div>
