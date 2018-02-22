@@ -43,9 +43,9 @@ return [
 
         'sidebar' => [
             'items' => [
+                'adminlte::layout.sidebar.search-form',
                 'adminlte::layout.sidebar.user-panel',
                 'adminlte::layout.sidebar.items',
-                'adminlte::layout.sidebar.search-form',
             ],
         ],
     ],
