@@ -21,7 +21,7 @@ return [
     'appearence' => [
         /*
          * Supported values: black, black-light, blue, blue-light,
-         *  green, green-light, purple-light,
+         *  green, green-light, purple, purple-light,
          *  red, red-light, yellow and yello-light.
          */
         'skin' => 'red',

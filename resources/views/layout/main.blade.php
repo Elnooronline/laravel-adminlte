@@ -6,6 +6,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/vendor/adminlte/dist/css/skins/skin-{{ $skin = config('adminlte.appearence.skin') }}.min.css">
+    <link rel="stylesheet" href="/vendor/adminlte/custom/css/styles.css">
 </head>
 <body class="hold-transition skin-{{ $skin }} sidebar-mini">
 <!-- Site wrapper -->
