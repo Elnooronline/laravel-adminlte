@@ -4,13 +4,13 @@
     @include('adminlte::layout.assets.head')
 
     <!-- iCheck -->
-    <link rel="stylesheet" href="vendor/adminlte/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="{{ url('vendor/adminlte/plugins/iCheck/square/blue.css') }}">
 </head>
 <body class="hold-transition register-page">
     @yield('content')
     @include('adminlte::layout.assets.footer')
     <!-- iCheck -->
-    <script src="/vendor/adminlte/plugins/iCheck/icheck.min.js"></script>
+    <script src="{{ url('vendor/adminlte/plugins/iCheck/icheck.min.js') }}"></script>
     <script>
       $(function () {
         $('input').iCheck({

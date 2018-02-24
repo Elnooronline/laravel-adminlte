@@ -28,11 +28,11 @@
 
 @include('adminlte::layout.assets.footer')
 <!-- SlimScroll -->
-<script src="vendor/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{ url('vendor/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
-<script src="vendor/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{ url('vendor/adminlte/bower_components/fastclick/lib/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="vendor/adminlte/dist/js/adminlte.min.js"></script>
+<script src="{{ url('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()
