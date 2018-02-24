@@ -28,9 +28,11 @@
     <!-- /.box-body -->
     @if (isset($footer) || (isset($collection) && method_exists($collection, 'links') && ! empty($collection->links()->toHtml())))
         <div class="box-footer">
-            <div class="pull-right">
-                {{ $collection->links() }}
-            </div>
+            @isset($collection)
+                <div class="pull-right">
+                    {{ $collection->links() }}
+                </div>
+            @endisset
             {{ $footer ?? '' }}
         </div>
         <!-- /.box-footer-->
