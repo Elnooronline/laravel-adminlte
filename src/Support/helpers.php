@@ -1,5 +1,19 @@
 <?php
 
+if (! function_exists('css_url_active')) {
+
+    /**
+     * set class name if the current url matches a given one.
+     *
+     * @param  string $url
+     * @return string
+     */
+    function css_url_active($url, $className = 'active')
+    {
+        return Request::is($url) ? $className : '';
+    }
+}
+
 if ( ! function_exists('css_route_active')) {
 
     /**
@@ -29,7 +43,7 @@ if ( ! function_exists('css_resource_active')) {
      */
     function css_resource_active($resource, $routes = [], $className = 'active')
     {
-        $routes = array_merge($routes, ['index', 'store', 'create', 'show', 'destroy', 'update', 'edit']);
+        $routes = array_merge($routes, ['index', 'create', 'show', 'edit']);
 
         foreach ($routes as $route) {
             if (Route::currentRouteName() == ($resource.'.'.$route)) {
