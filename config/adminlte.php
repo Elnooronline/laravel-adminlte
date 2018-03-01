@@ -19,8 +19,9 @@ return [
     'name' => 'Web App Name',
 
     'appearence' => [
+
         /*
-         * Supported values: black, black-light, blue, blue-light,
+         * Supported values are black, black-light, blue, blue-light,
          *  green, green-light, purple, purple-light,
          *  red, red-light, yellow and yello-light.
          */
@@ -31,6 +32,9 @@ return [
          */
         'dir' => 'ltr',
 
+        /*
+         * The header items that will be rendered.
+         */
         'header' => [
             'items' => [
                 'adminlte::layout.header.messages',
@@ -41,6 +45,9 @@ return [
             ],
         ],
 
+        /*
+         * The sidebar items that will be rendered.
+         */
         'sidebar' => [
             'items' => [
                 'adminlte::layout.sidebar.user-panel',
@@ -56,10 +63,8 @@ return [
         | URLs
         |--------------------------------------------------------------------------
         |
-        | Register here your dashboard, logout, login and register URLs. The
-        | logout URL automatically sends a POST request in Laravel 5.3 or higher.
-        | You can set the request to a GET or POST with logout_method.
-        | Set register_url to null if you don't want a register link.
+        | Register here your dashboard main urls, base, logout, login, etc...
+        | The options that can be nullable is register and password_request meaning that it can be disabled.
         |
         */
         'base' => '/',
