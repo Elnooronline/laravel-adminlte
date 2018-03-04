@@ -143,6 +143,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
             base_path('vendor/almasaeed2010/adminlte/bower_components/Ionicons') => public_path('vendor/adminlte/bower_components/Ionicons'),
             base_path('vendor/almasaeed2010/adminlte/bower_components/jquery') => public_path('vendor/adminlte/bower_components/jquery'),
             base_path('vendor/almasaeed2010/adminlte/bower_components/jquery-slimscroll') => public_path('vendor/adminlte/bower_components/jquery-slimscroll'),
+            base_path('vendor/almasaeed2010/adminlte/bower_components/fastclick') => public_path('vendor/adminlte/bower_components/fastclick'),
             base_path('vendor/almasaeed2010/adminlte/plugins/iCheck') => public_path('vendor/adminlte/plugins/iCheck'),
             base_path('vendor/almasaeed2010/adminlte/dist') => public_path('vendor/adminlte/dist'),
             $this->packagePath('resources/assets') => public_path('vendor/adminlte'),
