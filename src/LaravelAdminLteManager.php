@@ -2,9 +2,6 @@
 
 namespace Elnooronline\LaravelAdminLte;
 
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Facades\Auth;
-
 class LaravelAdminLteManager
 {
     /**

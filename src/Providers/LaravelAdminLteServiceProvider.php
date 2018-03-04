@@ -2,7 +2,6 @@
 
 namespace Elnooronline\LaravelAdminLte\Providers;
 
-use Elnooronline\Forms\Bootstrap;
 use Illuminate\Support\ServiceProvider;
 use Elnooronline\LaravelAdminLte\LaravelAdminLteManager;
 
@@ -144,6 +143,12 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
         ], 'adminlte-assets');
     }
 
+    /**
+     * Generate a path relative to the package root directory.
+     *
+     * @param $path
+     * @return string
+     */
     private function packagePath($path)
     {
         return __DIR__."/../../$path";
