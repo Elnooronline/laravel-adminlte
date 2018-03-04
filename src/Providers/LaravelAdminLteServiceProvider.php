@@ -140,7 +140,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
     {
         $this->publishes([
             $this->packagePath('resources/assets') => public_path('vendor/adminlte'),
-            base_path('vendor/vendor/adminlte/almasaeed2010') => public_path('vendor/adminlte'),
+            base_path('vendor/almasaeed2010/adminlte') => public_path('vendor/adminlte'),
         ], 'adminlte-assets');
     }
 
