@@ -10,3 +10,4 @@ yarn-error.log
 .env
 *~
 .php_cs.cache
+package-lock.json
