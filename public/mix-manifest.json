@@ -1,0 +1,8 @@
+{
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/auth.js": "/js/auth.js",
+    "/css/auth.css": "/css/auth.css",
+    "/css/admin-lte.css": "/css/admin-lte.css",
+    "/js/admin-lte.js": "/js/admin-lte.js",
+    "/js/manifest.js": "/js/manifest.js"
+}
