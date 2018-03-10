@@ -1,5 +1,11 @@
 const mix = require('laravel-mix');
 
+require('dotenv').config({
+    path: '../../.env'
+});
+
+let resourceRoot = process.env.MIX_ADMINLTE_RESOURCE_ROOT || '/vendor/adminlte/';
+
 const WebpackRTLPlugin = require('webpack-rtl-plugin');
 
 mix.setPublicPath('./public');
@@ -17,10 +23,19 @@ mix.js('resources/assets/js/auth.js', 'public/js')
 
 mix.sass('resources/assets/sass/auth.scss', 'public/css')
     .sass('resources/assets/sass/admin-lte.scss', 'public/css')
-    .options({ processCssUrls: false });
+    .options({
+        processCssUrls: true,
+        imgLoaderOptions: {
+            enabled: false,
+        },
+        resourceRoot
+    });
 
 mix.webpackConfig({
   plugins: [
     new WebpackRTLPlugin(),
   ],
 });
+if (mix.inProduction()) {
+    mix.version();
+}
