@@ -138,15 +138,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
     private function publishAssets()
     {
         $this->publishes([
-            base_path('vendor/almasaeed2010/adminlte/bower_components/bootstrap') => public_path('vendor/adminlte/bower_components/bootstrap'),
-            base_path('vendor/almasaeed2010/adminlte/bower_components/font-awesome') => public_path('vendor/adminlte/bower_components/font-awesome'),
-            base_path('vendor/almasaeed2010/adminlte/bower_components/Ionicons') => public_path('vendor/adminlte/bower_components/Ionicons'),
-            base_path('vendor/almasaeed2010/adminlte/bower_components/jquery') => public_path('vendor/adminlte/bower_components/jquery'),
-            base_path('vendor/almasaeed2010/adminlte/bower_components/jquery-slimscroll') => public_path('vendor/adminlte/bower_components/jquery-slimscroll'),
-            base_path('vendor/almasaeed2010/adminlte/bower_components/fastclick') => public_path('vendor/adminlte/bower_components/fastclick'),
-            base_path('vendor/almasaeed2010/adminlte/plugins/iCheck') => public_path('vendor/adminlte/plugins/iCheck'),
-            base_path('vendor/almasaeed2010/adminlte/dist') => public_path('vendor/adminlte/dist'),
-            $this->packagePath('resources/assets') => public_path('vendor/adminlte'),
+            __DIR__.'/../../public' => public_path('/vendor/adminlte'),
         ], 'adminlte-assets');
     }
 

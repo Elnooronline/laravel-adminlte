@@ -8,9 +8,9 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @if(config('adminlte.appearence.dir') == 'ltr')
-    <link rel="stylesheet" href="{{ url('css/admin-lte.css') }}">
+    <link rel="stylesheet" href="{{ url('vendor/adminlte/css/admin-lte.css') }}">
 @else
-    <link rel="stylesheet" href="{{ url('css/admin-lte.rtl.css') }}">
+    <link rel="stylesheet" href="{{ url('vendor/adminlte/css/admin-lte.rtl.css') }}">
 @endif
 
 @stack('assets.head')
