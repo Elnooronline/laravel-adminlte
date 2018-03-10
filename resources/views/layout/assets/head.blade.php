@@ -3,14 +3,15 @@
 <title>{{ isset($title) ? ($title . ' | ') : null }}{{ config('adminlte.name') }}</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<!-- Bootstrap 3.3.7 -->
-<link rel="stylesheet" href="{{ url('vendor/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="{{ url('vendor/adminlte/bower_components/font-awesome/css/font-awesome.min.css') }}">
-<!-- Ionicons -->
-<link rel="stylesheet" href="{{ url('vendor/adminlte/bower_components/Ionicons/css/ionicons.min.css') }}">
-<!-- Theme style -->
-<link rel="stylesheet" href="{{ url('vendor/adminlte/dist/css/AdminLTE.min.css') }}">
+
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+@if(config('adminlte.appearence.dir') == 'ltr')
+    <link rel="stylesheet" href="{{ url('css/admin-lte.css') }}">
+@else
+    <link rel="stylesheet" href="{{ url('css/admin-lte.rtl.css') }}">
+@endif
 
 @stack('assets.head')
 
