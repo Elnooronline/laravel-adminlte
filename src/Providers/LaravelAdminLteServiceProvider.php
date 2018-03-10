@@ -138,7 +138,7 @@ class LaravelAdminLteServiceProvider extends ServiceProvider
     private function publishAssets()
     {
         $this->publishes([
-            __DIR__.'/../../public' => public_path('/vendor/adminlte'),
+            $this->packagePath('public') => public_path('/vendor/adminlte'),
         ], 'adminlte-assets');
     }
 
