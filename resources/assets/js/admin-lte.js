@@ -10,6 +10,8 @@ window._ = require('lodash');
 try {
     window.$ = window.jQuery = require('jquery');
 
+    window.Vue = require('vue');
+
     require('bootstrap-sass');
 
     require('jquery-slimscroll');

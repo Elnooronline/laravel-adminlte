@@ -18,7 +18,7 @@ mix.js('resources/assets/js/auth.js', 'public/js')
       'vue', 'axios'
     ], 'public/js/vendor.js')
     .autoload({
-      jquery: ['$', 'jQuery', 'jquery'],
+      jquery: ['$', 'jQuery', 'jquery', 'Vue'],
     });
 
 mix.sass('resources/assets/sass/auth.scss', 'public/css')
