@@ -12,10 +12,15 @@ mix.setPublicPath('./public');
 
 mix.js('resources/assets/js/auth.js', 'public/js')
     .js('resources/assets/js/admin-lte.js', 'public/js')
+    .js('resources/assets/js/laravel-adminlte.js', 'public/js')
     .extract([
-      'lodash', 'jquery', 'bootstrap-sass',
-      'fastclick', 'jquery-slimscroll', 'admin-lte',
-      'vue', 'axios'
+      'lodash',
+      'jquery',
+      'bootstrap-sass',
+      'fastclick',
+      'jquery-slimscroll',
+      'admin-lte',
+      'sweetalert2',
     ], 'public/js/vendor.js')
     .autoload({
       jquery: ['$', 'jQuery', 'jquery'],

@@ -1,8 +1,9 @@
 {
-    "/js/vendor.js": "/js/vendor.js?id=64c31d22e344438c4e45",
-    "/js/auth.js": "/js/auth.js?id=69f186324e81ebb8c222",
+    "/js/auth.js": "/js/auth.js?id=0f7ef5db06e447d1ea78",
     "/css/auth.css": "/css/auth.css?id=4597c541b3dee50b20cc",
-    "/css/admin-lte.css": "/css/admin-lte.css?id=843ca888a4fbfea4fec8",
-    "/js/admin-lte.js": "/js/admin-lte.js?id=d3e13d81c540d85c8873",
-    "/js/manifest.js": "/js/manifest.js?id=7999d63793f040b855fb"
+    "/css/admin-lte.css": "/css/admin-lte.css?id=371d86f1f2d8d58d725c",
+    "/js/vendor.js": "/js/vendor.js?id=f84ec5cfa5a62941c054",
+    "/js/admin-lte.js": "/js/admin-lte.js?id=ce98aad288aa1650fa03",
+    "/js/laravel-adminlte.js": "/js/laravel-adminlte.js?id=fce09dbfd85779cea8ad",
+    "/js/manifest.js": "/js/manifest.js?id=ae77b1a887f04f9d6119"
 }

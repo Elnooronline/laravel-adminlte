@@ -23,11 +23,6 @@
 
 @include('adminlte::layout.assets.footer')
 
-<script>
-    $(document).ready(function () {
-        $('.sidebar-menu').tree()
-    })
-</script>
 @stack('scripts')
 </body>
 </html>
