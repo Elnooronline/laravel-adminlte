@@ -10,7 +10,7 @@ return [
     'register_a_new_membership'   => 'تسجيل عضوية جديدة',
     'i_forgot_my_password'        => 'نسيت كلمة السر؟',
     'i_already_have_a_membership' => 'هذا الحساب لديه عضوية سابقة',
-    'sign_in'                     => 'تسجيل الدخول',
+    'sign_in'                     => 'تسجيل',
     'log_out'                     => 'تسجيل خروج',
     'toggle_navigation'           => 'القائمة الجانبية',
     'login_message'               => 'يجب تسجيل الدخول',
