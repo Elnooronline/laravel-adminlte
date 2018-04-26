@@ -21,16 +21,24 @@ if ( ! function_exists('css_route_active')) {
      *
      * @param  string $route
      * @param  string $className
-     *
+     * @param array $conditions
      * @return string
      */
-    function css_route_active($route, $className = 'active')
+    function css_route_active($route, $className = 'active', $conditions = [])
     {
-        return Route::currentRouteName() == $route ? $className : '';
+        if (empty($conditions)) {
+            return Route::currentRouteName() == $route ? $className : '';
+        }
+
+        foreach ($conditions as $key => $value) {
+            if (request($key) == $value) {
+                return Route::currentRouteName() == $route ? $className : '';
+            }
+        }
     }
 }
 
-if ( ! function_exists('css_resource_active')) {
+if (! function_exists('css_resource_active')) {
 
     /**
      * Generate html element class if route is in a given resource.
@@ -41,13 +49,25 @@ if ( ! function_exists('css_resource_active')) {
      *
      * @return string
      */
-    function css_resource_active($resource, $routes = [], $className = 'active')
+    function css_resource_active($resource, $routes = [], $className = 'active', $conditions = [])
     {
-        $routes = array_merge($routes, ['index', 'create', 'show', 'edit']);
+        $routes = array_merge($routes, ['index', 'store', 'show', 'destroy', 'update', 'edit']);
 
-        foreach ($routes as $route) {
-            if (Route::currentRouteName() == ($resource.'.'.$route)) {
-                return $className;
+        if (empty($conditions)) {
+            foreach ($routes as $route) {
+                if (Route::currentRouteName() == ($resource.'.'.$route)) {
+                    return $className;
+                }
+            }
+        }
+
+        foreach ($conditions as $key => $value) {
+            if (request($key) == $value) {
+                foreach ($routes as $route) {
+                    if (Route::currentRouteName() == ($resource.'.'.$route)) {
+                        return $className;
+                    }
+                }
             }
         }
 
