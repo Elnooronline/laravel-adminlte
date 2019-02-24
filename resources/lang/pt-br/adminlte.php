@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'full_name'                   => 'Nome completo',
     'email'                       => 'Email',
     'password'                    => 'Senha',
@@ -19,4 +18,7 @@ return [
     'password_reset_message'      => 'Recuperar senha',
     'reset_password'              => 'Recuperar senha',
     'send_password_reset_link'    => 'Enviar link de recuperação de senha',
+    'member_since'                => 'Membro da',
+    'profile'                     => 'Profilo',
+    'online'                      => 'In linea',
 ];

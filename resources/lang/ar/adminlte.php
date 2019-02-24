@@ -18,7 +18,7 @@ return [
     'password_reset_message' => 'تم إعادة تعيين كلمة المرور',
     'reset_password' => 'إعادة تعيين كلمة السر',
     'send_password_reset_link' => 'إرسال رابط إعادة تعيين كلمة السر',
-    'member_since' => 'عضو',
+    'member_since' => 'عضو منذ',
     'profile' => 'الملف الشخصي',
     'online' => 'متصل',
 ];

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'full_name'                   => 'Полное имя',
     'email'                       => 'Почта',
     'password'                    => 'Пароль',
@@ -19,5 +18,7 @@ return [
     'password_reset_message'      => 'Восстановление пароля',
     'reset_password'              => 'Восстановление пароля',
     'send_password_reset_link'    => 'Отправить ссылку для восстановления пароля',
-
+    'member_since'                => 'член с',
+    'profile'                     => 'профиль',
+    'online'                      => 'онлайн',
 ];

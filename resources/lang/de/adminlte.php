@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'full_name'                   => 'Vollständiger Name',
     'email'                       => 'E-Mail',
     'password'                    => 'Passwort',
@@ -19,4 +18,7 @@ return [
     'password_reset_message'      => 'Bitte geben Sie Ihre E-Mail Adresse ein, um Ihr Passwort zurückzusetzen',
     'reset_password'              => 'Passwort zurücksetzen',
     'send_password_reset_link'    => 'Link zur Passwortwiederherstellung senden',
+    'member_since'                => 'Mitglied seit',
+    'profile'                     => 'Profil',
+    'online'                      => 'online',
 ];

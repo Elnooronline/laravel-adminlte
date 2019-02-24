@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'full_name'                   => '姓名',
     'email'                       => '邮箱',
     'password'                    => '密码',
@@ -19,4 +18,7 @@ return [
     'password_reset_message'      => '重置密码',
     'reset_password'              => '重置密码',
     'send_password_reset_link'    => '发送密码重置链接',
+    'member_since'                => '成员以来',
+    'profile'                     => '轮廓',
+    'online'                      => '线上',
 ];
