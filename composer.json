@@ -4,7 +4,7 @@
   "keywords": ["laravel", "adminlte", "dashboard", "admin", "administrator"],
   "require": {
     "php": "^7.0",
-    "illuminate/support": "~5.5.0|~5.6.0",
+    "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*",
     "laracasts/flash": "^3.0",
     "davejamesmiller/laravel-breadcrumbs": "^5.0"
   },
