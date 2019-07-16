@@ -16,10 +16,13 @@
                 </div>
             @endif
             <form action="{{ url(config('adminlte.urls.password_email', 'password/email')) }}" method="post">
-                {!! csrf_field() !!}
+                @csrf
 
                 <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <input type="email" name="email" class="form-control" value="{{ $email or old('email') }}"
+                    <input type="email"
+                           name="email"
+                           class="form-control"
+                           value="{{ $email ?? old('email') }}"
                            placeholder="@lang('adminlte::adminlte.email')">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
