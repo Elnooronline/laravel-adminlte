@@ -23,7 +23,8 @@
                            name="email"
                            class="form-control"
                            value="{{ $email ?? old('email') }}"
-                           placeholder="@lang('adminlte::adminlte.email')">
+                           placeholder="@lang('adminlte::adminlte.email')"
+                           autofocus>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">

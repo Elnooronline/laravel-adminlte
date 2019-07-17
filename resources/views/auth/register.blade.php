@@ -11,11 +11,15 @@
         <div class="register-box-body">
             <p class="login-box-msg">@lang('adminlte::adminlte.register_message')</p>
             <form action="{{ url(config('adminlte.urls.register')) }}" method="post">
-                {{ csrf_field() }}
+                @csrf
 
                 <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <input type="text" name="name" class="form-control" value="{{ old('name') }}"
-                           placeholder="@lang('adminlte::adminlte.full_name')">
+                    <input type="text"
+                           name="name"
+                           class="form-control"
+                           value="{{ old('name') }}"
+                           placeholder="@lang('adminlte::adminlte.full_name')"
+                           autofocus>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     @if ($errors->has('name'))
                         <span class="help-block">
