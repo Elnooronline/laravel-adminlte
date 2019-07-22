@@ -16,7 +16,7 @@
                 </div>
             @endif
             <form action="{{ url(config('adminlte.urls.password_email', 'password/email')) }}" method="post">
-                @csrf
+                {!! csrf_field() !!}
 
                 <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
                     <input type="email"

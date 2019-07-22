@@ -11,7 +11,7 @@
         <div class="login-box-body">
             <p class="login-box-msg">@lang('adminlte::adminlte.password_reset_message')</p>
             <form action="{{ url(config('adminlte.urls.password_reset', 'password/reset')) }}" method="post">
-                @csrf
+                {!! csrf_field() !!}
 
                 <input type="hidden" name="token" value="{{ $token }}">
 

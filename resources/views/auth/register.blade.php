@@ -11,7 +11,7 @@
         <div class="register-box-body">
             <p class="login-box-msg">@lang('adminlte::adminlte.register_message')</p>
             <form action="{{ url(config('adminlte.urls.register')) }}" method="post">
-                @csrf
+                {!! csrf_field() !!}
 
                 <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
                     <input type="text"
