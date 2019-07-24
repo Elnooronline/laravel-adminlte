@@ -24,16 +24,20 @@
             </tr>
         @endif
     </table>
-
+    @php
+        $hasPages = isset($collection)
+            && $collection instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator
+            && $collection->hasMorePages();
+    @endphp
     <!-- /.box-body -->
-    @if (isset($footer) || (isset($collection) && method_exists($collection, 'links') && ! empty($collection->links()->toHtml())))
+    @if (isset($footer) || $hasPages)
         <div class="box-footer">
-            @isset($collection)
+            @if ($hasPages)
                 <div class="pull-right">
                     {{ $collection->links() }}
                 </div>
-            @endisset
-            {{ $footer ?? '' }}
+            @endif
+            {{ $footer ?? null }}
         </div>
         <!-- /.box-footer-->
     @endif
