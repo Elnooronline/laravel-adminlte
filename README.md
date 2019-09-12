@@ -33,7 +33,7 @@ php artisan vendor:publish --tag=adminlte-assets --tag=adminlte-breadcrumbs --ta
 
 <a name="adminlte-auth"></a>
 ## 3. Overriding Laravel Authentication Views
-After following the steps in [Authentication Quick Start](https://laravel.com/docs/5.6/authentication#authentication-quickstart)
+After following the steps in [Authentication Quick Start](https://laravel.com/docs/master/authentication#authentication-quickstart)
 you can replace the created authentication views by the adminlte views by running the following command:
 ```
 php artisan vendor:publish --tag=adminlte-auth --force
