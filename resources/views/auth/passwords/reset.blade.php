@@ -16,8 +16,12 @@
                 <input type="hidden" name="token" value="{{ $token }}">
 
                 <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <input type="email" name="email" class="form-control" value="{{ $email or old('email') }}"
-                           placeholder="@lang('adminlte::adminlte.email')">
+                    <input type="email"
+                           name="email"
+                           class="form-control"
+                           value="{{ $email ?? old('email') }}"
+                           placeholder="@lang('adminlte::adminlte.email')"
+                           autofocus>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
