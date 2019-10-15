@@ -27,7 +27,7 @@
     @php
         $hasPages = isset($collection)
             && $collection instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator
-            && $collection->hasMorePages();
+            && $collection->hasPages();
     @endphp
     <!-- /.box-body -->
     @if (isset($footer) || $hasPages)
