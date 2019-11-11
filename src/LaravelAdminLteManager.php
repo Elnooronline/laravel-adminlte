@@ -28,6 +28,6 @@ class LaravelAdminLteManager
 
     public function getGravatar($email)
     {
-        return 'https://www.gravatar.com/avatar/'.md5($email);
+        return 'https://www.gravatar.com/avatar/'.md5($email).'?d=mm';
     }
 }
