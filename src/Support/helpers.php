@@ -31,10 +31,12 @@ if ( ! function_exists('css_route_active')) {
         }
 
         foreach ($conditions as $key => $value) {
-            if (request($key) == $value) {
-                return Route::currentRouteName() == $route ? $className : '';
+            if (request($key) != $value) {
+                return;
             }
         }
+
+        return $className;
     }
 }
 
