@@ -27,16 +27,22 @@ if ( ! function_exists('css_route_active')) {
     function css_route_active($route, $className = 'active', $conditions = [])
     {
         if (empty($conditions)) {
-            return Route::currentRouteName() == $route ? $className : '';
+            return Route::currentRouteName() == $route ? $className : null;
         }
+
+        if (Route::currentRouteName() != $route) {
+            return;
+        }
+
+        $condition = true;
 
         foreach ($conditions as $key => $value) {
             if (request($key) != $value) {
-                return;
+                $condition = false;
             }
         }
 
-        return $className;
+        return $condition ? $className : null;
     }
 }
 
